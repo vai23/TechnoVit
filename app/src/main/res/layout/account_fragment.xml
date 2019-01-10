@@ -294,6 +294,21 @@
                         android:layout_gravity="center"
                         android:elevation="2dp"
                         android:textColor="#fff" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="2dp"
+                        android:text="Change Password"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:background="@drawable/button_green"
+                        android:id="@+id/changepasswordprofile"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        />
                 </LinearLayout>
                 </ScrollView>
 
