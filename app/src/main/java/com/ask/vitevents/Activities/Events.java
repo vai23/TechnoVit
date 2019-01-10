@@ -70,14 +70,31 @@ public class Events extends Fragment {
 
         List<String> school = new ArrayList<String>();
         school.add("All Schools");
-        school.add("Qubit");
-        school.add("Connectivitieee");
-        school.add("Diseno");
-        school.add("Vsplash");
-        school.add("VITness");
-        school.add("Tai:Kuun");
-        school.add("Glitz");
-        school.add("Techno Fiesta");
+        school.add("Sports (ONLY FOR VITIANS)");
+        school.add("Dance");
+        school.add("SAE");
+        school.add("Android");
+        school.add("VITC Film");
+        school.add("Music");
+        school.add("ISHRAE");
+        school.add("CiviTek");
+        school.add("NeN");
+        school.add("MCQC Quiz");
+        school.add("Game Development");
+        school.add("VITeach");
+        school.add("Dramatics");
+        school.add("Code Y Gen");
+        school.add("Rotaract");
+        school.add("Telugu Literary");
+        school.add("Uddeshya");
+        school.add("Event Managers");
+        school.add("IEEE Student Branch");
+        school.add("Culture & Heritage");
+        school.add("English Literary Association");
+        school.add("Robotics");
+        school.add("WDC");
+        school.add("Photography");
+
         schooladapter = new ArrayAdapter<String>(getContext(),R.layout.spinner_item,school);
 
         schooladapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -112,32 +129,80 @@ public class Events extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 schoolname = parent.getItemAtPosition(position).toString();
-                if(schoolname.trim().equals("All Schools")){
+                if(schoolname.trim().equals("null")){
                     SCHOOL_ID = "0";
                 }
-                else if (schoolname.trim().equals("Qubit")){
-                    SCHOOL_ID = "2";
+                else if (schoolname.trim().equals("Sports (ONLY FOR VITIANS)")){
+                    SCHOOL_ID = "1";
                 }
-                else if (schoolname.trim().equals("Vitness")){
-                    SCHOOL_ID = "3";
-                }
-                else if (schoolname.trim().equals("Glitz")){
+                else if (schoolname.trim().equals("Dance")){
                     SCHOOL_ID = "5";
                 }
-                else if (schoolname.trim().equals("Diseno")){
+                else if (schoolname.trim().equals("SAE")){
                     SCHOOL_ID = "6";
                 }
-                else if (schoolname.trim().equals("Connectivitieee")){
+                else if (schoolname.trim().equals("Android")){
                     SCHOOL_ID = "7";
                 }
-                else if (schoolname.trim().equals("Vsplash")){
+                else if (schoolname.trim().equals("VITC Film")){
                     SCHOOL_ID = "8";
                 }
-                else if (schoolname.trim().equals("Tai:Kuun")){
+                else if (schoolname.trim().equals("Music")){
+                    SCHOOL_ID = "9";
+                }
+                else if (schoolname.trim().equals("ISHRAE")){
+                    SCHOOL_ID = "10";
+                }
+                else if (schoolname.trim().equals("CiviTek")){
+                    SCHOOL_ID = "11";
+                }
+                else if (schoolname.trim().equals("NeN")){
+                    SCHOOL_ID = "12";
+                }
+                else if (schoolname.trim().equals("MCQC Quiz")){
+                    SCHOOL_ID = "13";
+                }
+                else if (schoolname.trim().equals("Game Development")){
+                    SCHOOL_ID = "14";
+                }
+                else if (schoolname.trim().equals("VITeach")){
+                    SCHOOL_ID = "15";
+                }
+                else if (schoolname.trim().equals("Dramatics")){
+                    SCHOOL_ID = "16";
+                }
+                else if (schoolname.trim().equals("Code Y Gen")){
+                    SCHOOL_ID = "17";
+                }
+                else if (schoolname.trim().equals("Rotaract")){
+                    SCHOOL_ID = "18";
+                }
+                else if (schoolname.trim().equals("Telugu Literary")){
+                    SCHOOL_ID = "19";
+                }
+                else if (schoolname.trim().equals("Uddeshya")){
+                    SCHOOL_ID = "20";
+                }
+                else if (schoolname.trim().equals("Event Managers")){
+                    SCHOOL_ID = "21";
+                }
+                else if (schoolname.trim().equals("IEEE Student Branch")){
+                    SCHOOL_ID = "22";
+                }
+                else if (schoolname.trim().equals("Culture & Heritage")){
                     SCHOOL_ID = "23";
                 }
-                else if (schoolname.trim().equals("Techno Fiesta")){
-                    SCHOOL_ID = "10";
+                else if (schoolname.trim().equals("English Literary Association")){
+                    SCHOOL_ID = "24";
+                }
+                else if (schoolname.trim().equals("Robotics")){
+                    SCHOOL_ID = "25";
+                }
+                else if (schoolname.trim().equals("WDC")){
+                    SCHOOL_ID = "26";
+                }
+                else if (schoolname.trim().equals("Photography")){
+                    SCHOOL_ID = "27";
                 }
                 else {
                     SCHOOL_ID = "0";

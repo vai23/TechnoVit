@@ -155,25 +155,35 @@ public class event_detailed extends AppCompatActivity {
                         .setPositiveButton("CASH", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                Intent Reg = new Intent(event_detailed.this,Registration.class);
-                                Reg.putExtra("eventid",event_id);
-                                Reg.putExtra("teamid",team_id.get(position));
-                                Log.d("=====id",Integer.toString(position));
+                                if(items.length>0) {
+                                    Intent Reg = new Intent(event_detailed.this, Registration.class);
+                                    Reg.putExtra("eventid", event_id);
+                                    Reg.putExtra("teamid", team_id.get(position));
+                                    Log.d("=====id", Integer.toString(position));
 
-                                startActivity(Reg);
+                                    startActivity(Reg);
+                                }
+                                else {
+                                    Toast.makeText(event_detailed.this, "Create team first", Toast.LENGTH_SHORT).show();
+                                }
                             }
                         })
                         .setNeutralButton("ONLINE", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
-                                //Intent Reg = new Intent(event_detailed.this,AppPayment.class);
-                                Intent Reg = new Intent(event_detailed.this,CheckoutActivity.class);
-                                Reg.putExtra("eventId",event_id);
-                                Reg.putExtra("tid",team_id.get(position));
-                                Log.d("=====id",Integer.toString(position));
+                                if(items.length>0) {
+                                    //Intent Reg = new Intent(event_detailed.this,AppPayment.class);
+                                    Intent Reg = new Intent(event_detailed.this, CheckoutActivity.class);
+                                    Reg.putExtra("eventId", event_id);
+                                    Reg.putExtra("tid", team_id.get(position));
+                                    Log.d("=====id", Integer.toString(position));
 
-                                startActivity(Reg);
+                                    startActivity(Reg);
+                                }
+                                else {
+                                    Toast.makeText(event_detailed.this, "Create team first", Toast.LENGTH_SHORT).show();
+                                }
 
                             }
                         })
