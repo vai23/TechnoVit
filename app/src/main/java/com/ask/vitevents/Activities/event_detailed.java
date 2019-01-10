@@ -49,7 +49,7 @@ import static com.ask.vitevents.RoomDb.RootWork.server_ip;
 public class event_detailed extends AppCompatActivity {
 
 
-    private TextView eventname,eventdesc, eventvenue, price;
+    private TextView eventname,eventdesc, eventvenue, price, eventteamsize;
     EventViewModel mEventViewModel ;
     private ImageView btn_cash_back;
     Button register;
@@ -98,6 +98,7 @@ public class event_detailed extends AppCompatActivity {
         eventvenue = findViewById(R.id.detail_venue);
         register = findViewById(R.id.event_detail_register_btn);
         price = findViewById(R.id.event_price);
+        eventteamsize = findViewById(R.id.team_size_event_detail);
         //register_click = new Dialog(R.layout)
 
         update = new Handler();
@@ -262,6 +263,7 @@ public class event_detailed extends AppCompatActivity {
                         Log.d("===========id==",event.getPosterurl());
                         min= event.getMinteamsize();
                         max = event.getMaxteamsize();
+                        eventteamsize.setText(""+max);
                         price.setText("₹"+event.getFee());
                         //register.setTag("REGISTER NOW ₹"+event.getFee());
                         dialog.dismiss();
@@ -380,6 +382,7 @@ public class event_detailed extends AppCompatActivity {
                                     eventdesc.setText(temp_eventdesc);
                                     price.setText("₹"+temp_fee);
                                     eventvenue.setText(temp_venue);
+                                    eventteamsize.setText(temp_maxteamsize);
 
                                     max = temp_maxteamsize;
                                     min=temp_minteamsize;

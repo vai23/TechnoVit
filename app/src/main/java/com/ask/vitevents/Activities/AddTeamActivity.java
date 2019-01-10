@@ -2,6 +2,7 @@ package com.ask.vitevents.Activities;
 
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -85,10 +86,12 @@ public class AddTeamActivity extends AppCompatActivity {
                     count = Integer.parseInt(parent.getItemAtPosition(position).toString());
                 }
                 allEds = new ArrayList<EditText>();
+                //Drawable drawable=getApplicationContext().getResources().getDrawable(R.drawable.team_text_view_border);
 
                 for (int i = 0; i < count; i++) {
 
                     teammem = new EditText(AddTeamActivity.this);
+                    //teammem.setCompoundDrawablesWithIntrinsicBounds(drawable,null,null,null);
                     allEds.add(teammem);
 
                     teammem.setId((int) id);
