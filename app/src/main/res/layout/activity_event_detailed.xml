@@ -39,7 +39,7 @@
             <ImageView
                 android:id="@+id/event_det_poster"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="350dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/loader"
                 />
@@ -89,7 +89,7 @@
                     android:id="@+id/detail_venue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.6"
+                    android:layout_weight="0.7"
                     android:textAlignment="viewEnd"
                     android:textSize="22sp"
 
@@ -100,9 +100,9 @@
                     android:id="@+id/event_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.4"
                     android:text="Nil"
-                    android:gravity="end"
+                    android:gravity="right"
                     android:textSize="20sp"
                     />
             </LinearLayout>
