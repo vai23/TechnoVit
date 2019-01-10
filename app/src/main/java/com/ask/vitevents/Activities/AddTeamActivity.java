@@ -32,7 +32,7 @@ import static com.ask.vitevents.RoomDb.RootWork.server_ip;
 
 public class AddTeamActivity extends AppCompatActivity {
 
-    LinearLayout adder_layout;
+    LinearLayout adder_layout, text_view_holder;
     int count;
     Button add_but,but_confirm;
     EditText teammem,teamname;
@@ -49,6 +49,7 @@ public class AddTeamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_team);
         adder_layout = findViewById(R.id.team_add);
+        text_view_holder=findViewById(R.id.team_text_view);
         but_confirm = findViewById(R.id.confirm_team);
         teamname = findViewById(R.id.teamname);
         count = 0;
@@ -76,6 +77,7 @@ public class AddTeamActivity extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                text_view_holder.removeAllViews();
                 if(position == 0){
                     count = 0;
                 }
@@ -93,7 +95,7 @@ public class AddTeamActivity extends AppCompatActivity {
                     teammem.setTextColor(getResources().getColor(R.color.white));
                     teammem.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                             ViewGroup.LayoutParams.WRAP_CONTENT));
-                    adder_layout.addView(teammem);
+                    text_view_holder.addView(teammem);
                 }
             }
 
