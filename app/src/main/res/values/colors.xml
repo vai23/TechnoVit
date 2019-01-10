@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="dark_slate_gray">#162626</color>
+    <color name="colorAccent">#39FF14</color>
+    <color name="underline">#c6cbd3</color>
+    <color name="white">#ffffff</color>
+    <color name="register">#9ae08b</color>
+    <color name="event_card_name">#c6cbd3</color>
+    <color name="image_back">#4e8ef4</color>
+
+    <color name="blue">#0000FF</color>
+    <color name="font_card_col">#ffffff</color>
+    <color name="lightorange">#ffe398</color>
+    <color name="lightorangedark">#74efff</color>
+    <color name="intro_1">#ff7c66</color>
+    <color name="bluedark">#2f333f</color>
+    <color name="bluelight">#49acd5</color>
+    <color name="green">#45bc62</color>
+    <color name="orange">#eaad43</color>
+    <color name="card_back">#FFFFFF</color>
+    <color name="txt_default">#939190</color>
+    <color name="black">#000</color>
+    <color name="grey_alt">#797978</color>
+
+</resources>

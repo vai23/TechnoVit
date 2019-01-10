@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1084872619899",
+    "firebase_url": "https://vitevents-19fd8.firebaseio.com",
+    "project_id": "vitevents-19fd8",
+    "storage_bucket": "vitevents-19fd8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084872619899:android:64be32c80bb5cadf",
+        "android_client_info": {
+          "package_name": "com.ask.vitevents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084872619899-q9phlb7eqe5vq4rbnaqsm14351um6drp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUpGIMYg3ZdlpquGDuI7Z6bEzj-pI_Qxw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

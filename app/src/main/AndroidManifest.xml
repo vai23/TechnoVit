@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ask.vitevents">
+
+
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <!-- Permission for SMS -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.ask.vitevents.Classes.ForegroundChannel"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.ask.vitevents.Activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name="com.ask.vitevents.RoomDb.FetchBack"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name="com.ask.vitevents.Activities.LoginActivity" />
+        <activity android:name="com.ask.vitevents.Activities.RegisterActivity" />
+        <activity android:name="com.ask.vitevents.Activities.StartActivity">
+
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="launch"
+                    android:host="com.ask.vitevents"
+                    />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- for api below 21 -->
+        <service
+            android:name="com.ask.vitevents.RoomDb.FetchBack_19"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.ask.vitevents.Activities.event_detailed"
+            android:label="@string/title_activity_event_detailed"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:label="@string/title_activity_event_detailed">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "example://gizmos” -->
+                <data
+                    android:host="www.vitchennaievents.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.ask.vitevents.Services.NotificationService"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.ask.vitevents.Services.RestartServicesReceiver"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.ask.atw.RestartService" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.ask.vitevents.Activities.RegisterActivityOthers" />
+        <activity android:name="com.ask.vitevents.Activities.SelectActivity" />
+
+        <service
+            android:name="com.ask.vitevents.Services.NotificationAndroidO"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.ask.vitevents.Activities.ForgotPassword" />
+        <activity android:name="com.ask.vitevents.Activities.AddTeamActivity" />
+        <activity android:name="com.ask.vitevents.Activities.Registration"/>
+        <activity android:name="com.ask.vitevents.Activities.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="com.paynimo.android.payment.OTPReadingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.paynimo.android.payment.PaymentModesActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.paynimo.android.payment.PaymentActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.paynimo.android.payment.WebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <receiver
+            android:name="com.paynimo.android.payment.network.NetworkStateReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.ask.vitevents.Activities.tees_detailed"/>
+        <activity android:name="com.ask.vitevents.Activities.Register_tees"/>
+        <activity android:name="com.ask.vitevents.Activities.AppPayment"/>
+
+
+
+    </application>
+
+</manifest>

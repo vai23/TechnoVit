@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SelectActivity">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:src="@drawable/log_reg_bg"
+        android:scaleType="centerCrop"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/technovit"
+            android:layout_margin="20dp"
+            android:padding="10dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:background="@drawable/button_bg"
+            android:text="VITans"
+            android:id="@+id/vitans"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/advent_pro_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:elevation="10dp"
+            android:textAllCaps="false"
+            android:layout_marginStart="30dp"
+            android:layout_marginRight="30dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="Others"
+            android:id="@+id/nvitans"
+            android:textAllCaps="false"
+            android:elevation="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/advent_pro_bold"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

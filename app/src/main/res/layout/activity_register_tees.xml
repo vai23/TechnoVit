@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Registration">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/log_reg_bg_ol"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/technovit"
+            android:layout_marginBottom="80dp"
+            android:padding="10dp"/>
+
+        <pl.droidsonroids.gif.GifTextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/loader"
+            android:layout_gravity="center"
+            android:id="@+id/registerloadtee"/>
+        <pl.droidsonroids.gif.GifTextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:background="@drawable/tick"
+            android:layout_gravity="center"
+            android:id="@+id/registerloadfinishtee"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registering Please Wait.."
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:id="@+id/registerloadmsgtee"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_bg"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:id="@+id/register_backtee"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+</RelativeLayout>
